@@ -35,6 +35,7 @@ You can select multiple datasets for testing. Specifically, K, N, Y, and Q repre
 
 ## Black-Box Attack 
 **Performance evaluations under black-box setting.**
+
 Similarly, you also need to download the dataset and extract the video features utilizing different NR-VQA models, and copy their local addresses to videos_dir and features_dir of [Black-box.py], respectively. Please note that the video features in "features/VSFA_K_features" are also applicable to black-box attack.
 
 ```
