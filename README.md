@@ -21,7 +21,7 @@ We test our method on four datasets, including [KoNViD-1k](http://database.mmsp-
 ## Model Preparation
 **NR-VQA Models.**
 
-Four representative NR-VQA models are tested in the experiments, including [VSFA](https://github.com/lidq92/VSFA), [MDTVSFA](https://github.com/lidq92/MDTVSFA), [TiVQA](https://github.com/GZHU-DVL/TiVQA), and [BVQA-2022](https://github.com/GZHU-DVL/TiVQA). The NR-VQA models are trained according to the links for adversarial testing. The training files for the above four models are already deployed in our source code, the configuration of each model and the requirements for training can be found in the links above. In order to conveniently evaluate our results, we provide the trained model of [VSFA](https://github.com/lidq92/VSFA) on [KoNViD-1k](http://database.mmsp-kn.de/konvid-1k-database.html) for testing, and the model weights provided in "models/VSFA_K".
+Four representative NR-VQA models are tested in the experiments, including [VSFA](https://github.com/lidq92/VSFA), [MDTVSFA](https://github.com/lidq92/MDTVSFA), [TiVQA](https://github.com/GZHU-DVL/TiVQA), and [BVQA-2022](https://github.com/GZHU-DVL/TiVQA). The NR-VQA models are trained according to the links for adversarial testing. The training files for the above four models are already deployed in our source code, but the configuration of each model and the requirements for training can be found in the links above. In order to conveniently evaluate our results, we provide the trained model of [VSFA](https://github.com/lidq92/VSFA) on [KoNViD-1k](http://database.mmsp-kn.de/konvid-1k-database.html) for testing, and the model weights provided in "models/VSFA_K".
 
 ## White-Box Attack 
 **Performance evaluations under white-box setting.**
