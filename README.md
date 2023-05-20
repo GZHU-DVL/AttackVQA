@@ -26,21 +26,21 @@ Four representative NR-VQA models are tested in the experiments, including [VSFA
 ## White-Box Attack 
 **Performance evaluations under white-box setting.**
 
-First, you need to download the dataset and extract the video features utilizing different NR-VQA models, and copy their local addresses to videos_dir and features_dir of [White-box.py], respectively. For convenient verification of the results, we have saved the features extracted by [VSFA](https://github.com/lidq92/VSFA) on [KoNViD-1k](http://database.mmsp-kn.de/konvid-1k-database.html) into "features/VSFA_K_features".
+First, you need to download the dataset and extract the video features utilizing different NR-VQA models, and copy their local addresses to videos_dir and features_dir of White-box.py, respectively. For convenient verification of the results, we have saved the features extracted by [VSFA](https://github.com/lidq92/VSFA) on [KoNViD-1k](http://database.mmsp-kn.de/konvid-1k-database.html) into "features/VSFA_K_features".
 
 ```
 python White-box.py  --trained_datasets=K --quality_model=1 --iterations=30 --beta=0.0003\
 ```
-You can select multiple datasets for testing. Specifically, K, N, Y, and Q represent KoNViD-1k, LIVE-VQC, YouTube-UGC, and LSVQ, respectively.
+You can select multiple datasets for testing. Specifically, K, N, Y, and Q represent KoNViD-1k, LIVE-VQC, YouTube-UGC, and LSVQ, respectively. After running the White-box.py, you can obtain the MOS of each video and the estimated quality score before and after the attack in the directory "/counterexample/VSFA/VSFA_white/".
 
 ## Black-Box Attack 
 **Performance evaluations under black-box setting.**
 
-Similarly, you also need to download the dataset and extract the video features utilizing different NR-VQA models, and copy their local addresses to videos_dir and features_dir of [Black-box.py], respectively. Please note that the video features in "features/VSFA_K_features" are also applicable to black-box attack.
+Similarly, you also need to download the dataset and extract the video features utilizing different NR-VQA models, and copy their local addresses to videos_dir and features_dir of Black-box.py, respectively. Please note that the video features in "features/VSFA_K_features" are also applicable to black-box attack.
 
 ```
 python Black-box.py  --trained_datasets=K --quality_model=1 --query=300 --gamma=5/255\
 ```
-
+After running the White-box.py, you can obtain the MOS of each video and the estimated quality score before and after the attack in the directory "/counterexample/VSFA/VSFA_black/".
 ## License
 This source code is made available for research purpose only.
