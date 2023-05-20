@@ -26,7 +26,7 @@ Four representative NR-VQA models are tested in the experiments, including [VSFA
 ## White-Box Attack 
 **Performance evaluations under white-box setting.**
 
-First, you need to download the dataset and extract the video features utilizing different NR-VQA models, and copy their local addresses to videos_dir and features_dir of [White-box.py], respectively. For convenient verification of the results, we have saved the features extracted by [VSFA](https://github.com/lidq92/VSFA) into "features/VSFA_K_features".
+First, you need to download the dataset and extract the video features utilizing different NR-VQA models, and copy their local addresses to videos_dir and features_dir of [White-box.py], respectively. For convenient verification of the results, we have saved the features extracted by [VSFA](https://github.com/lidq92/VSFA) on [KoNViD-1k](http://database.mmsp-kn.de/konvid-1k-database.html) into "features/VSFA_K_features".
 
 ```
 python White-box.py  --trained_datasets=K --quality_model=1 --iterations=30 --beta=0.0003\
