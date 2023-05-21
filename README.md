@@ -41,6 +41,6 @@ Similarly, you also need to download the dataset and extract the video features 
 ```
 python Black-box.py  --trained_datasets=K --quality_model=1 --query=300 --gamma=5/255\
 ```
-After running the White-box.py, you can obtain the MOS of each video and the estimated quality score before and after the attack in the directory "/counterexample/VSFA/VSFA_black/".
+After running the Black-box.py, you can obtain the MOS of each video and the estimated quality score before and after the attack in the directory "/counterexample/VSFA/VSFA_black/".
 ## License
 This source code is made available for research purpose only.
