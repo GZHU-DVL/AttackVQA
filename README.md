@@ -16,7 +16,7 @@ Vulnerabilities in Video Quality Assessment Models: The Challenge of Adversarial
 ## Dataset Preparation
 **VQA Datasets.**
 
-We test our method on four datasets, including [KoNViD-1k](http://database.mmsp-kn.de/konvid-1k-database.html), [LIVE-VQC](http://live.ece.utexas.edu/research/LIVEVQC/index.html), [YouTube-UGC](https://media.withyoutube.com/), and [LSVQ](https://github.com/baidut/PatchVQ), download the datasets from the official website. 
+To study the vulnerability of current NR-VQA models, four representative NR-VQA models are tested in the experiments, including [KoNViD-1k](http://database.mmsp-kn.de/konvid-1k-database.html), [LIVE-VQC](http://live.ece.utexas.edu/research/LIVEVQC/index.html), [YouTube-UGC](https://media.withyoutube.com/), and [LSVQ](https://github.com/baidut/PatchVQ), download the datasets from the official website. 
 
 ## Model Preparation
 **NR-VQA Models.**
