@@ -1,5 +1,6 @@
 ## AttackVQA
 Vulnerabilities in Video Quality Assessment Models: The Challenge of Adversarial Attacks (Accepted by NeurIPS2023, Spotlight!.)
+<img src="[https://github.com/GZHU-DVL/TiVQA/blob/main/Framework.jpg](https://github.com/GZHU-DVL/AttackVQA/blob/main/Black-box-attack.jpg)" /><br/>
 # Usage
 ## Requirment
 * python==3.8.8
