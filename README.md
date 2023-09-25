@@ -1,4 +1,4 @@
-![image](https://github.com/GZHU-DVL/AttackVQA/assets/70045571/93da13e1-82f6-4751-8bfc-3f641b6b1dee)# AttackVQA
+AttackVQA
 Vulnerabilities in Video Quality Assessment Models: The Challenge of Adversarial Attacks (Accepted by NeurIPS2023, Spotlight!.)
 # Usage
 ## Requirment
