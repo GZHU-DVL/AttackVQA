@@ -45,5 +45,8 @@ Similarly, you also need to download the dataset and extract the video features 
 python Black-box.py  --trained_datasets=K --quality_model=1 --query=300 --gamma=5/255\
 ```
 After running the Black-box.py, you can obtain the MOS of each video and the estimated quality score before and after the attack in the directory "/counterexample/VSFA/VSFA_black/".
+
+*Note:* Since continuous playback of the video raises the just noticeable difference (JND) threshold, setting $gamma$ to 5/255 renders the adversarial video nearly indistinguishable to the human eye. However, upon closer inspection of individual frames, subtle perturbations may be detected in smooth areas of the video frame. To further enhance imperceptibility of the perturbations, you can opt to set $gamma$ to 3/255. Even with this setting, our proposed black box attack method can still achieve competitive attack effects.
+
 ## License
 This source code is made available for research purpose only.
