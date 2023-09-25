@@ -1,7 +1,7 @@
 ## AttackVQA
 Official Repository for "Vulnerabilities in Video Quality Assessment Models: The Challenge of Adversarial Attacks" (Accepted by NeurIPS2023, Spotlight!)
 <img src="https://github.com/GZHU-DVL/AttackVQA/blob/main/Black-box-attack.jpg" /><br/>
-Some adversarial videos under both white-box and black-box settings are presented in "Adversarial_videos"
+-- Some adversarial videos under both white-box and black-box settings are presented in "Adversarial_videos"
 # Usage
 ## Requirment
 * python==3.8.8
