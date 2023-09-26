@@ -36,6 +36,8 @@ python White-box.py  --trained_datasets=K --quality_model=1 --iterations=30 --be
 ```
 You can select multiple datasets for testing. Specifically, K, N, Y, and Q represent KoNViD-1k, LIVE-VQC, YouTube-UGC, and LSVQ, respectively. After running the White-box.py, you can obtain the MOS of each video and the estimated quality score before and after the attack in the directory "/counterexample/VSFA/VSFA_white/".
 
+***Note:*** In the white-box setting, the perturbation can be constrained using $L_2$ or $L_\infty$ norm, which can be set in [White-box.py](https://github.com/GZHU-DVL/AttackVQA/blob/main/White-box.py#L35-L47). In this case, we restrict the pixel-level $L_2$ norm of the perturbation to be below 1/255 or restrict the $L_\infty$ norm to be below 3/255. Experimental results indicate that the performance of these two settings is comparable.
+
 ## Black-Box Attack 
 **Performance evaluations under black-box setting.**
 
