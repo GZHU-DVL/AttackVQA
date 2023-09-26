@@ -34,14 +34,14 @@ First, you need to download the dataset and extract the video features utilizing
 ```
 python White-box.py  --trained_datasets=K --quality_model=1 --iterations=30 --beta=0.0003\
 ```
-You can select multiple datasets for testing. Specifically, K, N, Y, and Q represent KoNViD-1k, LIVE-VQC, YouTube-UGC, and LSVQ, respectively. After running the White-box.py, you can obtain the MOS of each video and the estimated quality score before and after the attack in the directory "/counterexample/VSFA/VSFA_white/".
+You can select multiple datasets for testing. Specifically, K, N, Y, and Q represent KoNViD-1k, LIVE-VQC, YouTube-UGC, and LSVQ, respectively. After running the [White-box.py](https://github.com/GZHU-DVL/AttackVQA/blob/main/White-box.py), you can obtain the MOS of each video and the estimated quality score before and after the attack in the directory "/counterexample/VSFA/VSFA_white/".
 
 ***Note:*** In the white-box setting, the perturbation can be constrained using $L_2$ or $L_\infty$ norm, which can be set in [White-box.py](https://github.com/GZHU-DVL/AttackVQA/blob/main/White-box.py#L35-L47). We restrict the pixel-level $L_2$ norm of the perturbation to be below 1/255 or restrict the $L_\infty$ norm to be below 3/255. Experimental results indicate that the performance of these two settings is comparable.
 
 ## Black-Box Attack 
 **Performance evaluations under black-box setting.**
 
-Similarly, you also need to download the dataset and extract the video features utilizing different NR-VQA models, and copy their local addresses to videos_dir and features_dir of Black-box.py, respectively. Please note that the video features in "Features/VSFA_K_features/" are also applicable to black-box attack.
+Similarly, you also need to download the dataset and extract the video features utilizing different NR-VQA models, and copy their local addresses to videos_dir and features_dir of [Black-box.py](https://github.com/GZHU-DVL/AttackVQA/blob/main/Black-box.py), respectively. Please note that the video features in "Features/VSFA_K_features/" are also applicable to black-box attack.
 
 ```
 python Black-box.py  --trained_datasets=K --quality_model=1 --query=300 --gamma=5/255\
