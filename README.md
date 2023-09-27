@@ -1,5 +1,5 @@
-## AttackVQA
-Official Repository for "Vulnerabilities in Video Quality Assessment Models: The Challenge of Adversarial Attacks" (Accepted by NeurIPS2023, Spotlight!) [ArXiv](https://arxiv.org/pdf/2309.13609.pdf)
+## AttackVQA (Updating)
+Official Repository for "Vulnerabilities in Video Quality Assessment Models: The Challenge of Adversarial Attacks" (Accepted by NeurIPS2023, Spotlight!) [ArXiv version](https://arxiv.org/pdf/2309.13609.pdf)
 <img src="https://github.com/GZHU-DVL/AttackVQA/blob/main/Black-box-attack.jpg" /><br/>
 
 * Some adversarial videos under both white-box and black-box settings are presented in "Adversarial_videos/"
@@ -48,7 +48,7 @@ python Black-box.py  --trained_datasets=K --quality_model=1 --query=300 --gamma=
 ```
 After running the [Black-box.py](https://github.com/GZHU-DVL/AttackVQA/blob/main/Black-box.py), you can obtain the MOS of each video and the estimated quality score before and after the attack in the directory "/counterexample/VSFA/VSFA_black/".
 
-***Note:*** Since continuous playback of the video raises the just noticeable difference (JND) threshold, setting $\gamma$ to 5/255 renders the adversarial video nearly indistinguishable to the human eye (*Examples in "Adversarial_videos/"*). However, upon closer inspection of individual frames, subtle perturbations may be detected in smooth areas of the video frame. To further enhance imperceptibility of the perturbations, you can opt to set $\gamma$ to 3/255. Even with this setting, our proposed black box attack method can still achieve competitive attack effects.
+***Note:*** Since continuous playback of the video raises the just noticeable difference (JND) threshold, setting $\gamma$ to 5/255 renders the adversarial video nearly indistinguishable to the human eye (*Examples in "Adversarial_videos/"*). However, upon meticulous examination and magnification of individual frames, subtle perturbations may be detected in smooth areas of the video frame. To further enhance imperceptibility of the perturbations, you can opt to set $\gamma$ to 3/255. Even with this setting, our proposed black box attack method can still achieve competitive attack effects.
 
 ## License
 This source code is made available for research purpose only.
