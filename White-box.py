@@ -54,10 +54,10 @@ def quantize(x):
 def jnd_attack_adam(extractor,video_data, model,length,label, median,q_hat_original_min,q_hat_original_max,config):  #White-box attack on NR-VQA model
     adv = video_data.clone().detach()  #Adversarial video
     ref = video_data.clone().detach()  # Clean_video
-    s_init = quality_prediction(extractor,model, config.quality_model,ref, length).detach() # Original quality score (estimated qualiy score)
+    s_init = quality_prediction(extractor,model, config.quality_model,ref, length).detach() # Original quality score (estimated quality score)
     eps = (ref.shape[2] * ref.shape[3] * 3 * (1 / 255) ** 2) ** 0.5    #JND constraint
     adv.requires_grad = True
-    if label >= median:   #Compute the boundary (disturbed qualiy score)
+    if label >= median:   #Compute the boundary (disturbed quality score)
         boundary = torch.from_numpy(np.array(q_hat_original_min)).to('cuda')
     else:
         boundary = torch.from_numpy(np.array((q_hat_original_max))).to('cuda')
@@ -71,7 +71,7 @@ def jnd_attack_adam(extractor,video_data, model,length,label, median,q_hat_origi
             optimizer = torch.optim.Adam([adv], lr=config.beta)
             s = quality_prediction(extractor,model, config.quality_model,adv, length)
 
-        Lsrb = F.l1_loss(s, boundary)    #Compute the Scroe-Reversed Boundary loss
+        Lsrb = F.l1_loss(s, boundary)    #Compute the Score-Reversed Boundary loss
         optimizer.zero_grad()
         Lsrb.backward()
         adv.grad.data[torch.isnan(adv.grad.data)] = 0
@@ -172,7 +172,7 @@ def do_attack(config, model):
         video_data = video_data.transpose(0, 3, 1, 2) / 255
         length[0][0] = video_data.shape[0]
         with torch.no_grad():
-            sa = quality_prediction(extractor, model, config.quality_model, torch.from_numpy(video_data), length) # Original quality score (estimated qualiy score)
+            sa = quality_prediction(extractor, model, config.quality_model, torch.from_numpy(video_data), length) # Original quality score (estimated quality score)
         q_hat_original.append(sa.item())
         index_list.append(index)
 
