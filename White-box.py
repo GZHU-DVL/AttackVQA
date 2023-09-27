@@ -219,7 +219,7 @@ def do_attack(config, model):
         if config.save_original: #Save the original video frames
             for frame_index in range(video_data_intermediate.shape[0]):
                 if frame_index % 100 == 0:
-                    save_name = str(video_names[video_index] + '_') + str(cnt) + '.png'
+                    save_name = str(video_names[index_list[video_index]] + '_') + str(cnt) + '.png'
                     cnt = cnt + 1 
                     path = os.path.join(original_folder, save_name)
                     original_index = quantize(video_data_intermediate[frame_index])
@@ -229,7 +229,7 @@ def do_attack(config, model):
         if config.save_attack & config.attack_trigger:  #Save the adversarial video frames
             for frame_index in range(adversarial_video.shape[0]):
                 if frame_index % 100==0:
-                    save_name = str(video_names[video_index] + '_') + str(cnt) + '.png'
+                    save_name = str(video_names[index_list[video_index]] + '_') + str(cnt) + '.png'
                     cnt = cnt + 1
                     path = os.path.join(attack_folder, save_name)
                     adv_index = quantize(adversarial_video[frame_index])
