@@ -156,7 +156,6 @@ def do_attack(config, model):
     mos_max = Info['scores'][0, :].max()
     train_dataset = VQADataset(features_dir, test_index, max_len, scale=mos_max)
     train_loader = torch.utils.data.DataLoader(dataset=train_dataset, batch_size=config.batch_size, shuffle=True, drop_last=True)
-    cnt = 0
     device = torch.device("cuda" if torch.cuda.is_available() and use_cuda else "cpu")
     extractor = ResNet50().to('cuda')
     extractor.eval()
@@ -216,6 +215,7 @@ def do_attack(config, model):
         if not os.path.exists(original_folder):
             os.makedirs(original_folder)
 
+        cnt = 0
         if config.save_original: #Save the original video frames
             for frame_index in range(video_data_intermediate.shape[0]):
                 if frame_index % 100 == 0:
