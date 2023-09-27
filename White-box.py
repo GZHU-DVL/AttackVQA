@@ -220,10 +220,12 @@ def do_attack(config, model):
             for frame_index in range(video_data_intermediate.shape[0]):
                 if frame_index % 100 == 0:
                     save_name = str(video_names[video_index] + '_') + str(cnt) + '.png'
+                    cnt = cnt + 1 
                     path = os.path.join(original_folder, save_name)
                     original_index = quantize(video_data_intermediate[frame_index])
                     original_index.save(path)
 
+        cnt = 0
         if config.save_attack & config.attack_trigger:  #Save the adversarial video frames
             for frame_index in range(adversarial_video.shape[0]):
                 if frame_index % 100==0:
