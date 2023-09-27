@@ -4,7 +4,7 @@ Official Repository for "Vulnerabilities in Video Quality Assessment Models: The
 
 * Some adversarial videos under both white-box and black-box settings are presented in "Adversarial_videos/"
 # Usage
-## Requirment
+## Requirements
 * python==3.8.8
 * torch==1.8.1
 * torchvision==0.9.1
