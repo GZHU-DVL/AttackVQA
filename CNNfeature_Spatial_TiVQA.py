@@ -67,7 +67,7 @@ def get_features(extractor,video_data,video_LBP, frame_batch_size=64, device='cu
         batch_LBP = video_LBP[frame_start:frame_end].to(device)
         content_aware_mean_features, content_aware_std_features, texture_mean_features, texture_std_features = extractor(
             batch_video, batch_LBP)
-        output1 = torch.cat((output1, content_aware_mean_features), 0).to(device)  # content_aware featuers
+        output1 = torch.cat((output1, content_aware_mean_features), 0).to(device)  # content_aware features
         output2 = torch.cat((output2, content_aware_std_features), 0).to(device)
         output3 = torch.cat((output3, texture_mean_features), 0).to(device)  # texture features
         output4 = torch.cat((output4, texture_std_features), 0).to(device)
