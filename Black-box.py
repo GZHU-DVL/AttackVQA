@@ -29,7 +29,7 @@ torch.backends.cudnn.benchmark = False
 use_cuda = True
 
 def get_Lsrb_value(model,video_data,label,extractor,length,q_hat_original_min,q_hat_original_max,median,config):  #Compute the Scroe-Reversed Boundary loss
-    if label>=median: #Compute the boundary (disturbed qualiy score)
+    if label>=median: #Compute the boundary (disturbed quality score)
         boundary = torch.from_numpy(np.array(q_hat_original_min)).to('cuda')
     else:
         boundary = torch.from_numpy(np.array(q_hat_original_max)).to('cuda')
@@ -43,7 +43,7 @@ def patch_based(extractor,video_data, model,length,label,q_hat_original_min,q_ha
     patch_heigth = (video_data.shape[2] // config.patch_size)  #The number of patches in the vertical direction
     patch_width = (video_data.shape[3] // config.patch_size)   #The number of patches in the horizontal direction
     perm = torch.randperm(pn)  #Encode information of the positions of the selected patches
-    last_prob, last_score, boundary = get_Lsrb_value(model,video_data, label,extractor,length,q_hat_original_min,q_hat_original_max,median,config)  #Original quality score (estimated qualiy score)
+    last_prob, last_score, boundary = get_Lsrb_value(model,video_data, label,extractor,length,q_hat_original_min,q_hat_original_max,median,config)  #Original quality score (estimated quality score)
     init_prob = last_prob
     init_score = last_score
     for n in range(0,pn,Z_patches):  # One round contains N queries.
@@ -169,7 +169,7 @@ def do_attack(config, model):
         video_data = video_data.transpose(0, 3, 1, 2) / 255
         length[0][0] = video_data.shape[0]
         with torch.no_grad():
-            sa = quality_prediction(extractor, model, config.quality_model, torch.from_numpy(video_data),length)  #Original quality score (estimated qualiy score)
+            sa = quality_prediction(extractor, model, config.quality_model, torch.from_numpy(video_data),length)  #Original quality score (estimated quality score)
         q_hat_original.append(sa.item())
         index_list.append(index)
 
