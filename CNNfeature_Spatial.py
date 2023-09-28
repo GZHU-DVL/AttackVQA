@@ -15,7 +15,7 @@ from torchvision import  models as torchmodels
 import torch.nn as nn
 
 def VideoDataset(video_data):
-    """Read data from the original datase for feature extraction"""
+    """Read data from the original dataset for feature extraction"""
     video_data_detach =video_data
     transform = transforms.Compose([
         transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
