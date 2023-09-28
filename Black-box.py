@@ -28,7 +28,7 @@ torch.backends.cudnn.deterministic = True
 torch.backends.cudnn.benchmark = False
 use_cuda = True
 
-def get_Lsrb_value(model,video_data,label,extractor,length,q_hat_original_min,q_hat_original_max,median,config):  #Compute the Scroe-Reversed Boundary loss
+def get_Lsrb_value(model,video_data,label,extractor,length,q_hat_original_min,q_hat_original_max,median,config):  #Compute the Score-Reversed Boundary loss
     if label>=median: #Compute the boundary (disturbed quality score)
         boundary = torch.from_numpy(np.array(q_hat_original_min)).to('cuda')
     else:
@@ -321,7 +321,6 @@ def main():
 config = parse_config()
 method_folder = query_method(config.quality_model)
 file_name = os.path.join(method_folder + '_black/')
-
 
 if __name__ == "__main__":
     main()
