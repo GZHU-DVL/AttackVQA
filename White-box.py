@@ -166,7 +166,6 @@ def do_attack(config, model):
 
     for i, (length, label, index) in enumerate(train_loader):
         q_mos.append(label[0][0])
-        median = np.median(np.array(q_mos))        # The threshold to decide whether a video is of high quality or low quality
         video_data = skvideo.io.vread(os.path.join(videos_dir, video_names[index[0]])) #Original video
         video_data = video_data.transpose(0, 3, 1, 2) / 255
         length[0][0] = video_data.shape[0]
@@ -175,6 +174,7 @@ def do_attack(config, model):
         q_hat_original.append(sa.item())
         index_list.append(index)
 
+    median = np.median(np.array(q_mos))        # The threshold to decide whether a video is of high quality or low quality
     q_hat_original_min = (((0)-np.mean(q_mos))/np.std(q_mos))*np.std(q_hat_original) + np.mean(q_hat_original) # Compute the boundary according to the distribution quality scores estimated by target NR-VQA models.
     q_hat_original_max = (((1)-np.mean(q_mos))/np.std(q_mos))*np.std(q_hat_original) + np.mean(q_hat_original)
 
