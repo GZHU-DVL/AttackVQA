@@ -52,6 +52,7 @@ After running the [Black-box.py](https://github.com/GZHU-DVL/AttackVQA/blob/main
 
 <img src="https://github.com/GZHU-DVL/AttackVQA/blob/main/Different_linf.jpg" /><br/>
 
+*Table I: Performance evaluations on VSFA.*
 ||SRCC||PLCC||R||
 |-|-|-|-|-|-|-|
 |$\gamma$|KoNViD-1k|LSVQ-Test|KoNViD-1k|LSVQ-Test|KoNViD-1k|LSVQ-Test|
