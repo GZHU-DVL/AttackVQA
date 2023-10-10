@@ -52,7 +52,7 @@ After running the [Black-box.py](https://github.com/GZHU-DVL/AttackVQA/blob/main
 
 <img src="https://github.com/GZHU-DVL/AttackVQA/blob/main/Different_linf.jpg" /><br/>
 
-||SRCC||PLCC||R||
+|SRCC|PLCC|R|
 |-|-|-|-|-|-|-|
 |$\gamma$|KoNViD-1k|LSVQ-Test|KoNViD-1k|LSVQ-Test|KoNViD-1k|LSVQ-Test|
 |5/255|-0.0305|0.2386|-0.7938|0.2413|1.6573|2.3545|
