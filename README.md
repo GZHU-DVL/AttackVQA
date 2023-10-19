@@ -1,4 +1,4 @@
-## AttackVQA (Updating)
+## AttackVQA
 Official Repository for "Vulnerabilities in Video Quality Assessment Models: The Challenge of Adversarial Attacks" (Accepted by NeurIPS2023, Spotlight!) [[ArXiv version]](https://arxiv.org/pdf/2309.13609.pdf)
 <img src="https://github.com/GZHU-DVL/AttackVQA/blob/main/Black-box-attack.jpg" /><br/>
 
@@ -39,6 +39,8 @@ You can select multiple datasets for testing. Specifically, K, N, Y, and Q repre
 ***Note:*** In the white-box setting, the perturbation can be constrained using $L_2$ or $L_\infty$ norm, which can be set in [White-box.py](https://github.com/GZHU-DVL/AttackVQA/blob/main/White-box.py#L35-L47). We restrict the pixel-level $L_2$ norm of the perturbation to be below 1/255 or restrict the $L_\infty$ norm to be below 3/255. Experimental results indicate that the performance of these two settings is comparable.
 
 <img src="https://github.com/GZHU-DVL/AttackVQA/blob/main/White-box-l2.png" /><br/>
+
+
 <img src="https://github.com/GZHU-DVL/AttackVQA/blob/main/White-box-linf.png" /><br/>
 
 
